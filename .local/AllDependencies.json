@@ -21967,18 +21967,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nesto\\.nuget\\packages\\": {},
-    "C:\\Users\\nesto\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
+    "C:\\Users\\Asani\\.nuget\\packages\\": {},
+    "C:\\Users\\Asani\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Recovery Autodebit",
       "projectName": "Recovery Autodebit",
-      "projectPath": "D:\\EOD\\Recovery Autodebit\\.local",
-      "packagesPath": "C:\\Users\\nesto\\.nuget\\packages\\",
-      "outputPath": "D:\\EOD\\Recovery Autodebit\\.local",
+      "projectPath": "E:\\RPA EOD\\Recovery-Autodebit\\.local",
+      "packagesPath": "C:\\Users\\Asani\\.nuget\\packages\\",
+      "outputPath": "E:\\RPA EOD\\Recovery-Autodebit\\.local",
       "fallbackFolders": [
-        "C:\\Users\\nesto\\AppData\\Local\\UiPath\\NugetFallbackFolder"
+        "C:\\Users\\Asani\\AppData\\Local\\UiPath\\NugetFallbackFolder"
       ]
     },
     "frameworks": {
@@ -22015,7 +22015,7 @@
             "version": "[23.2.0-preview, 23.2.0-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\nesto\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Asani\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
