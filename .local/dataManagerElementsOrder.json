@@ -1,0 +1,44 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "oda_and_amount_oflow_autopay&Sequence_101",
+        "str_oda_autopay&Sequence_101",
+        "oda_autopay_formatted&Sequence_101",
+        "oda_and_amount_dctd_autopay&Sequence_101",
+        "oda_and_amount_fstl_autopay&Sequence_101",
+        "oda_and_amount_oflow_customer_payout&Sequence_108",
+        "oda_and_amount_dctd_customer_payout&Sequence_108",
+        "str_oda_customer_payout&Sequence_108",
+        "oda_customer_payout_formatted&Sequence_108",
+        "oda_and_amount_fstl_customer_payout&Sequence_108",
+        "oda_and_amount_oflow_briva_repay&Sequence_115",
+        "oda_and_amount_dctd_briva_repay&Sequence_115",
+        "str_oda_briva_repay&Sequence_115",
+        "oda_briva_repay_formatted&Sequence_115",
+        "oda_and_amount_fstl_briva_repay&Sequence_115",
+        "BRICERPR&Sequence_93",
+        "BRICERPR&Sequence_94",
+        "BRICERPR&Sequence_91",
+        "BRICERPR&Sequence_92",
+        "BRICERPR&Sequence_89",
+        "BRICERPR&Sequence_90",
+        "table_header_2&Sequence_1",
+        "table_header_1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

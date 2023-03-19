@@ -1,0 +1,1569 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.file_excel="[&quot;Report\&quot;+System.DateTime.Now.ToString (“MMMM”)+&quot;\Rekap &quot;+System.DateTime.Now.ToString (“dd-MMM-yyyy”)+&quot;.xlsx&quot;]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="file_excel" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1182,827</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="72">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="124">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,434" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="table_header_1" />
+      <Variable x:TypeArguments="sd:DataTable" Name="table_header_2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Autopay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_101">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_autopay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_autopay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_autopay_formatted" />
+        <Variable x:TypeArguments="x:String" Name="str_oda_autopay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_oflow_autopay" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_89">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_fstl_autopay]" DisplayName="oda dan amount fstl autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[&quot;SELECT loan_account,sum(amount) from custom.fstl where transaction_Date_time = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' and transfer_type = 'AutoPay' and status = 'S' group by loan_Account;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:BuildDataTable DataTable="[table_header_1]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column5&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column6&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;amount_fstl&lt;/Column2&gt;&#xA;    &lt;Column3&gt;amount_dctd_acli&lt;/Column3&gt;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xA;    &lt;Column5&gt;status&lt;/Column5&gt;&#xA;    &lt;Column6&gt;cek oflow&lt;/Column6&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:BuildDataTable>
+        <ui:BuildDataTable DataTable="[table_header_2]" DisplayName="Table Header 2" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;amount_dctd_acli&lt;/Column2&gt;&#xA;    &lt;Column3&gt;oda&lt;/Column3&gt;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:BuildDataTable>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_4" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet autopay" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_13">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_96">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1697" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:RenameSheetX DisplayName="Rename Sheet" From="[Excel.Sheet(&quot;Sheet1&quot;)]" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="RenameSheetX_3" To="autopay" />
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_27" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;A:A&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:TextFormat />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_28" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;B:B&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;autopay&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_18" IgnoreEmptySource="False" Source="[oda_and_amount_fstl_autopay]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteRangeX>
+                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteCellX_18" Value="[&quot;=CONCATENATE(&quot;&quot;'&quot;&quot;,A2,&quot;&quot;'&quot;&quot;)&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteCellX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_19" IgnoreEmptySource="False" Source="[table_header_1]" />
+                      <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="444,90" sap2010:WorkflowViewState.IdRef="AutoFillX_18" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C2&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFillX>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,169" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C:C&quot;)]" SaveTo="[oda_autopay_formatted]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ReadRangeX>
+                      <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_3" TargetRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C:C&quot;)]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+      <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_oda_autopay]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[String.Join(",",oda_autopay_formatted.AsEnumerable().Select(Function(a) a.Field(Of String)("amount_dctd_acli")).ToArray())]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_90">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_5" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_dctd_autopay]" DisplayName="oda dan amount dctd autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_7" Sql="[&quot;select (SELECT foracid FROM tbaadm.gam WHERE gam.acid = a.acid) AS oda, sum(tran_amt) from tbaadm.dctd_acli a where a.acid in (select acid from tbaadm.gam where foracid in (&quot;+str_oda_autopay+&quot;)) AND tran_rmks ='CERIA AutoDebit LOC Credit' AND  part_tran_type ='C' AND tran_date = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' Group By oda;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_oflow_autopay]" DisplayName="oda dan amount oflow autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_8" Sql="[&quot;select foracid,oflow_amt from custom.c_rom a join tbaadm.gam b on a.acid=b.acid where foracid in (&quot;+str_oda_autopay+&quot;);&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_5" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet vlookup" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_14">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_100">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,851" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_3" Name="vlookup_a" Workbook="[Excel]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:InsertSheetX>
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_29" Range="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;A:A&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_30" Range="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;B:B&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_31" Range="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;C:C&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_32" Range="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;D:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_33" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                      </Sequence>
+                      <Sequence DisplayName="Write data &amp; autofill" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_20" IgnoreEmptySource="False" Source="[table_header_2]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_21" IgnoreEmptySource="False" Source="[oda_and_amount_dctd_autopay]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;C2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_22" IgnoreEmptySource="False" Source="[oda_and_amount_oflow_autopay]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_19" Value="[&quot;=VLOOKUP(A2,vlookup_a!A:B,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_19" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_20" Value="[&quot;=VLOOKUP(A2,vlookup_a!C:D,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_20" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;D2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;E2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_21" Value="[&quot;=IF(B2=C2,&quot;&quot;aman&quot;&quot;,IF(B2&lt;C2,&quot;&quot;aman&quot;&quot;,&quot;&quot;cek&quot;&quot;))&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_21" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;E2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[&quot;=IF(D2=B2,&quot;&quot;no update&quot;&quot;,&quot;&quot;update&quot;&quot;)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_22" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;F2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                      </Sequence>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_5" Range="[Excel.Sheet(&quot;autopay&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_6" Range="[Excel.Sheet(&quot;vlookup_a&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+    <Sequence DisplayName="Briva Repay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_115">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_briva_repay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_briva_repay_formatted" />
+        <Variable x:TypeArguments="x:String" Name="str_oda_briva_repay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_briva_repay" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_oflow_briva_repay" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_93">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_8" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_fstl_briva_repay]" DisplayName="oda dan amount fstl briva repay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_12" Sql="[&quot;SELECT loan_account,sum(amount) from custom.fstl where transaction_Date_time = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' and transfer_type = 'BRIVAREPAY' and status = 'S' group by loan_Account;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_8" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet briva repay" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_17">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,192" sap2010:WorkflowViewState.IdRef="Sequence_110">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1745" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="444,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_7" Name="briva repay" Workbook="[Excel]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:InsertSheetX>
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_41" Range="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;A:A&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:TextFormat />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_42" Range="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;B:B&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;briva repay&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_28" IgnoreEmptySource="False" Source="[oda_and_amount_fstl_briva_repay]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteRangeX>
+                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;briva repay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteCellX_28" Value="[&quot;=CONCATENATE(&quot;&quot;'&quot;&quot;,A2,&quot;&quot;'&quot;&quot;)&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteCellX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_29" IgnoreEmptySource="False" Source="[table_header_1]" />
+                      <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="444,90" sap2010:WorkflowViewState.IdRef="AutoFillX_28" StartRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;C2&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFillX>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,169" sap2010:WorkflowViewState.IdRef="ReadRangeX_7" Range="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;C:C&quot;)]" SaveTo="[oda_briva_repay_formatted]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ReadRangeX>
+                      <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_5" TargetRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;C:C&quot;)]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+      <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_oda_briva_repay]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[String.Join(",",oda_briva_repay_formatted.AsEnumerable().Select(Function(a) a.Field(Of String)("amount_dctd_acli")).ToArray())]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_94">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_9" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_dctd_briva_repay]" DisplayName="oda dan amount dctd briva repay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_13" Sql="[&quot;select (SELECT foracid FROM tbaadm.gam WHERE gam.acid = a.acid) AS oda, sum(tran_amt) from tbaadm.dctd_acli a where a.acid in (select acid from tbaadm.gam where foracid in (&quot;+str_oda_briva_repay+&quot;)) AND part_tran_type ='C' AND tran_date = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' Group By oda;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_oflow_briva_repay]" DisplayName="oda dan amount oflow briva repay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_14" Sql="[&quot;select foracid,oflow_amt from custom.c_rom a join tbaadm.gam b on a.acid=b.acid where foracid in (&quot;+str_oda_briva_repay+&quot;);&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_9" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet vlookup" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_18">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,192" sap2010:WorkflowViewState.IdRef="Sequence_114">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,851" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_5" Name="vlookup_b" Workbook="[Excel]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:InsertSheetX>
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_43" Range="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;A:A&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_44" Range="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;B:B&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_45" Range="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;C:C&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_46" Range="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;D:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_47" Range="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;C:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                      </Sequence>
+                      <Sequence DisplayName="Write data &amp; autofill" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_30" IgnoreEmptySource="False" Source="[table_header_2]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_31" IgnoreEmptySource="False" Source="[oda_and_amount_dctd_briva_repay]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_b&quot;).Range(&quot;C2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_32" IgnoreEmptySource="False" Source="[oda_and_amount_oflow_briva_repay]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;briva repay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_29" Value="[&quot;=VLOOKUP(A2,vlookup_b!A:B,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_29" StartRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;C2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;briva repay&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_30" Value="[&quot;=VLOOKUP(A2,vlookup_b!C:D,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_30" StartRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;D2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;briva repay&quot;).Cell(&quot;E2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_31" Value="[&quot;=IF(B2=C2,&quot;&quot;aman&quot;&quot;,IF(B2&lt;C2,&quot;&quot;aman&quot;&quot;,&quot;&quot;cek&quot;&quot;))&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_31" StartRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;E2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;briva repay&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_32" Value="[&quot;=IF(D2=B2,&quot;&quot;no update&quot;&quot;,&quot;&quot;update&quot;&quot;)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_32" StartRange="[Excel.Sheet(&quot;briva repay&quot;).Range(&quot;F2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                      </Sequence>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_9" Range="[Excel.Sheet(&quot;briva repay&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_10" Range="[Excel.Sheet(&quot;vlookup_b&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+    <Sequence DisplayName="Customer Payout" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_108">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_customer_payout" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_customer_payout_formatted" />
+        <Variable x:TypeArguments="x:String" Name="str_oda_customer_payout" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_customer_payout" />
+        <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_oflow_customer_payout" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_91">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_6" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_fstl_customer_payout]" DisplayName="oda dan amount fstl customer payout" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_9" Sql="[&quot;SELECT loan_account,sum(amount) from custom.fstl where transaction_Date_time = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' and transfer_type = 'CustomerPayOut' and status = 'S' group by loan_Account;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_6" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet customer payout" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_15">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,192" sap2010:WorkflowViewState.IdRef="Sequence_103">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_7" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1745" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="444,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_6" Name="customer payout" Workbook="[Excel]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:InsertSheetX>
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_34" Range="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;A:A&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:TextFormat />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_35" Range="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;B:B&quot;)]">
+                        <ueab:FormatRangeX.Alignment>
+                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                        </ueab:FormatRangeX.Alignment>
+                        <ueab:FormatRangeX.Font>
+                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                        </ueab:FormatRangeX.Font>
+                        <ueab:FormatRangeX.Format>
+                          <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                        </ueab:FormatRangeX.Format>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:FormatRangeX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;customer payout&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_23" IgnoreEmptySource="False" Source="[oda_and_amount_fstl_customer_payout]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteRangeX>
+                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;customer payout&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteCellX_23" Value="[&quot;=CONCATENATE(&quot;&quot;'&quot;&quot;,A2,&quot;&quot;'&quot;&quot;)&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:WriteCellX>
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_24" IgnoreEmptySource="False" Source="[table_header_1]" />
+                      <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="444,90" sap2010:WorkflowViewState.IdRef="AutoFillX_23" StartRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;C2&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFillX>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,169" sap2010:WorkflowViewState.IdRef="ReadRangeX_6" Range="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;C:C&quot;)]" SaveTo="[oda_customer_payout_formatted]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ReadRangeX>
+                      <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_4" TargetRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;C:C&quot;)]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+      <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_oda_customer_payout]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[String.Join(",",oda_customer_payout_formatted.AsEnumerable().Select(Function(a) a.Field(Of String)("amount_dctd_acli")).ToArray())]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_92">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_7" ProviderName="System.Data.Odbc" ConnectionString="Dsn=BRICERPR" DatabaseConnection="[BRICERPR]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:DatabaseConnect>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_dctd_customer_payout]" DisplayName="oda dan amount dctd customer payout" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_10" Sql="[&quot;select (SELECT foracid FROM tbaadm.gam WHERE gam.acid = a.acid) AS oda, sum(tran_amt) from tbaadm.dctd_acli a where a.acid in (select acid from tbaadm.gam where foracid in (&quot;+str_oda_customer_payout+&quot;)) AND part_tran_type ='C' AND tran_date = '&quot;+System.DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot; 00:00:00' Group By oda;&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_oflow_customer_payout]" DisplayName="oda dan amount oflow customer payout" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_11" Sql="[&quot;select foracid,oflow_amt from custom.c_rom a join tbaadm.gam b on a.acid=b.acid where foracid in (&quot;+str_oda_customer_payout+&quot;);&quot;]" TimeoutMS="300000">
+          <ui:ExecuteQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ExecuteQuery>
+        <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_7" />
+      </Sequence>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : sheet vlookup" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_16">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,192" sap2010:WorkflowViewState.IdRef="Sequence_107">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,851" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_4" Name="vlookup_c" Workbook="[Excel]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:InsertSheetX>
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_36" Range="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;A:A&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_37" Range="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;B:B&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_38" Range="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;C:C&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_39" Range="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;D:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_40" Range="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;C:D&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                      </Sequence>
+                      <Sequence DisplayName="Write data &amp; autofill" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_25" IgnoreEmptySource="False" Source="[table_header_2]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_26" IgnoreEmptySource="False" Source="[oda_and_amount_dctd_customer_payout]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_c&quot;).Range(&quot;C2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_27" IgnoreEmptySource="False" Source="[oda_and_amount_oflow_customer_payout]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteRangeX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;customer payout&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_24" Value="[&quot;=VLOOKUP(A2,vlookup_c!A:B,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_24" StartRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;C2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;customer payout&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_25" Value="[&quot;=VLOOKUP(A2,vlookup_c!C:D,2,FALSE)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_25" StartRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;D2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;customer payout&quot;).Cell(&quot;E2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_26" Value="[&quot;=IF(B2=C2,&quot;&quot;aman&quot;&quot;,IF(B2&lt;C2,&quot;&quot;aman&quot;&quot;,&quot;&quot;cek&quot;&quot;))&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_26" StartRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;E2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;customer payout&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_27" Value="[&quot;=IF(D2=B2,&quot;&quot;no update&quot;&quot;,&quot;&quot;update&quot;&quot;)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_27" StartRange="[Excel.Sheet(&quot;customer payout&quot;).Range(&quot;F2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                      </Sequence>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_7" Range="[Excel.Sheet(&quot;customer payout&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="AutoFitX_8" Range="[Excel.Sheet(&quot;vlookup_c&quot;)]" Rows="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:AutoFitX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+  </Sequence>
+</Activity>
