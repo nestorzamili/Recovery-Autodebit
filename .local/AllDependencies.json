@@ -21967,8 +21967,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asani\\.nuget\\packages\\": {},
-    "C:\\Users\\Asani\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
+    "C:\\Users\\Asani\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
@@ -21976,10 +21975,7 @@
       "projectName": "Recovery Autodebit",
       "projectPath": "E:\\RPA EOD\\Recovery-Autodebit\\.local",
       "packagesPath": "C:\\Users\\Asani\\.nuget\\packages\\",
-      "outputPath": "E:\\RPA EOD\\Recovery-Autodebit\\.local",
-      "fallbackFolders": [
-        "C:\\Users\\Asani\\AppData\\Local\\UiPath\\NugetFallbackFolder"
-      ]
+      "outputPath": "E:\\RPA EOD\\Recovery-Autodebit\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
