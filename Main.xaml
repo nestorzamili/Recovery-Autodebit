@@ -190,7 +190,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Sequence DisplayName="Autopay" sap:VirtualizedContainerService.HintSize="512,618" sap2010:WorkflowViewState.IdRef="Sequence_165">
+    <Sequence DisplayName="Autopay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_165">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_autopay" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_autopay" />
@@ -204,7 +204,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,565" sap2010:WorkflowViewState.IdRef="Sequence_89">
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_89">
         <Sequence.Variables>
           <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
         </Sequence.Variables>
@@ -214,37 +214,37 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=PostgreSQL35W" DatabaseConnection="[BRICERPR]">
+        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=PostgreSQL35W" DatabaseConnection="[BRICERPR]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DatabaseConnect>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_fstl_autopay]" DisplayName="oda dan amount fstl autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[&quot;SELECT loan_account,sum(amount) from custom.fstl where transaction_Date_time = '&quot;+dateRPA+&quot; 00:00:00' and transfer_type = 'AutoPay' and status = 'S' and lchg_user_id in ('CDCI01','FIVUSR') group by loan_Account;&quot;]" TimeoutMS="300000">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_fstl_autopay]" DisplayName="oda dan amount fstl autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[&quot;SELECT loan_account,sum(amount) from custom.fstl where transaction_Date_time = '&quot;+dateRPA+&quot; 00:00:00' and transfer_type = 'AutoPay' and status = 'S' and lchg_user_id in ('CDCI01','FIVUSR') group by loan_Account;&quot;]" TimeoutMS="300000">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:ExecuteQuery>
-        <ui:BuildDataTable DataTable="[table_header_1]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column5&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column6&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column7&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;amount_fstl&lt;/Column2&gt;&#xA;    &lt;Column3&gt;amount_dctd_acli&lt;/Column3&gt;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xA;    &lt;Column5&gt;amount_fix&lt;/Column5&gt;&#xA;    &lt;Column6&gt;status&lt;/Column6&gt;&#xA;    &lt;Column7&gt;cek oflow&lt;/Column7&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+        <ui:BuildDataTable DataTable="[table_header_1]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column5&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;clr_bal_amt&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column6&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column7&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;amount_fstl&lt;/Column2&gt;&#xD;&#xA;    &lt;Column3&gt;amount_dctd_acli&lt;/Column3&gt;&#xD;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xD;&#xA;    &lt;Column5&gt;amount_fix&lt;/Column5&gt;&#xD;&#xA;    &lt;clr_bal_amt&gt;clr_bal_amt&lt;/clr_bal_amt&gt;&#xD;&#xA;    &lt;Column6&gt;status&lt;/Column6&gt;&#xD;&#xA;    &lt;Column7&gt;cek oflow&lt;/Column7&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:BuildDataTable>
-        <ui:BuildDataTable DataTable="[table_header_2]" DisplayName="Table Header 2" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;amount_dctd_acli&lt;/Column2&gt;&#xA;    &lt;Column3&gt;oda&lt;/Column3&gt;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+        <ui:BuildDataTable DataTable="[table_header_2]" DisplayName="Table Header 2" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;clr_bal_amt&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;amount_dctd_acli&lt;/Column2&gt;&#xD;&#xA;    &lt;clr_bal_amt&gt;clr_bal_amt&lt;/clr_bal_amt&gt;&#xD;&#xA;    &lt;Column3&gt;oda&lt;/Column3&gt;&#xD;&#xA;    &lt;Column4&gt;amount_oflow&lt;/Column4&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -366,7 +366,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
-      <Assign sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_5">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[str_oda_autopay]</OutArgument>
         </Assign.To>
@@ -392,7 +392,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DatabaseConnect>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_dctd_autopay]" DisplayName="oda dan amount dctd autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_7" Sql="[&quot;select (SELECT foracid FROM tbaadm.gam WHERE gam.acid = a.acid) AS oda, sum(tran_amt) from tbaadm.dctd_acli a where a.acid in (select acid from tbaadm.gam where foracid in (&quot;+str_oda_autopay+&quot;)) AND tran_rmks ='CERIA AutoDebit LOC Credit' AND  part_tran_type ='C' AND tran_date = '&quot;+dateRPA+&quot; 00:00:00' Group By oda;&quot;]" TimeoutMS="300000">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[oda_and_amount_dctd_autopay]" DisplayName="oda, amount_dctd, clr_bal_amt autopay" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_7" Sql="[&quot;select (SELECT foracid FROM tbaadm.gam WHERE gam.acid = a.acid) AS oda, sum(tran_amt), (SELECT clr_bal_amt FROM tbaadm.gam WHERE gam.acid = a.acid) as clr_bal_amt from tbaadm.dctd_acli a where a.acid in (select acid from tbaadm.gam where foracid in (&quot;+str_oda_autopay+&quot;)) AND tran_rmks ='CERIA AutoDebit LOC Credit' AND  part_tran_type ='C' AND tran_date = '&quot;+dateRPA+&quot; 00:00:00' Group By oda,clr_bal_amt;&quot;]" TimeoutMS="300000">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
@@ -422,14 +422,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,501" sap2010:WorkflowViewState.IdRef="Sequence_100">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_100">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="484,390" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" TemplatePath="Report\March\Rekap 17 March 2023.xlsx" WorkbookPath="[file_excel]">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
@@ -499,7 +499,7 @@
                             <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
                           </ueab:FormatRangeX.Font>
                           <ueab:FormatRangeX.Format>
-                            <ueab:TextFormat />
+                            <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
                           </ueab:FormatRangeX.Format>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -516,6 +516,23 @@
                             <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
                           </ueab:FormatRangeX.Font>
                           <ueab:FormatRangeX.Format>
+                            <ueab:TextFormat />
+                          </ueab:FormatRangeX.Format>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:FormatRangeX>
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_51" Range="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;E:E&quot;)]">
+                          <ueab:FormatRangeX.Alignment>
+                            <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                          </ueab:FormatRangeX.Alignment>
+                          <ueab:FormatRangeX.Font>
+                            <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                          </ueab:FormatRangeX.Font>
+                          <ueab:FormatRangeX.Format>
                             <ueab:NumberFormat DecimalPlaces="0" UseThousandSeparator="True" />
                           </ueab:FormatRangeX.Format>
                           <sap:WorkflowViewStateService.ViewState>
@@ -525,7 +542,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:FormatRangeX>
-                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_33" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C:E&quot;)]">
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_33" Range="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;C:F&quot;)]">
                           <ueab:FormatRangeX.Alignment>
                             <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                           </ueab:FormatRangeX.Alignment>
@@ -566,7 +583,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:WriteRangeX>
-                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;C2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_22" IgnoreEmptySource="False" Source="[oda_and_amount_oflow_autopay]">
+                        <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;vlookup_a&quot;).Range(&quot;D2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_22" IgnoreEmptySource="False" Source="[oda_and_amount_oflow_autopay]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -574,7 +591,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:WriteRangeX>
-                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_19" Value="[&quot;=IF(ISNA(VLOOKUP(A2,vlookup_a!A:B,2,FALSE)),0,(VLOOKUP(A2,vlookup_a!A:B,2,FALSE)))&quot;]">
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_19" Value="[&quot;=IF(ISNA(VLOOKUP(A2,vlookup_a!A:C,2,FALSE)),0,(VLOOKUP(A2,vlookup_a!A:C,2,FALSE)))&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -590,7 +607,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:AutoFillX>
-                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_20" Value="[&quot;=VLOOKUP(A2,vlookup_a!C:D,2,FALSE)&quot;]">
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_20" Value="[&quot;=VLOOKUP(A2,vlookup_a!D:E,2,FALSE)&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -622,7 +639,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:AutoFillX>
-                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_21" Value="[&quot;=IF(B2=C2,&quot;&quot;aman&quot;&quot;,IF(B2&lt;C2,&quot;&quot;aman&quot;&quot;,&quot;&quot;cek&quot;&quot;))&quot;]">
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_43" Value="[&quot;=IF(ISNA(VLOOKUP(A2,vlookup_a!A:C,3,FALSE)),0,(VLOOKUP(A2,vlookup_a!A:C,3,FALSE)))&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -630,7 +647,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:WriteCellX>
-                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_21" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;F2&quot;)]">
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_41" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;F2&quot;)]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -638,7 +655,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:AutoFillX>
-                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;G2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[&quot;=IF(D2=B2,&quot;&quot;no update&quot;&quot;,&quot;&quot;update&quot;&quot;)&quot;]">
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;G2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_21" Value="[&quot;=IF(B2=C2,&quot;&quot;aman&quot;&quot;,IF(B2&lt;C2,&quot;&quot;aman&quot;&quot;,&quot;&quot;cek&quot;&quot;))&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -646,7 +663,23 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:WriteCellX>
-                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_22" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;G2&quot;)]">
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_21" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;G2&quot;)]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:AutoFillX>
+                        <ueab:WriteCellX Cell="[Excel.Sheet(&quot;autopay&quot;).Cell(&quot;H2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[&quot;=IF(D2=B2,&quot;&quot;no update&quot;&quot;,&quot;&quot;update&quot;&quot;)&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:WriteCellX>
+                        <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="AutoFillX_22" StartRange="[Excel.Sheet(&quot;autopay&quot;).Range(&quot;H2&quot;)]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -676,7 +709,7 @@
                 </ueab:ExcelApplicationCard.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
