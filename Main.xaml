@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1182,929</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,929</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -190,7 +190,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Sequence DisplayName="Autopay" sap:VirtualizedContainerService.HintSize="512,618" sap2010:WorkflowViewState.IdRef="Sequence_165">
+    <Sequence DisplayName="Autopay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_165">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_autopay" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_autopay" />
@@ -210,7 +210,7 @@
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -366,7 +366,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
-      <Assign sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_5">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[str_oda_autopay]</OutArgument>
         </Assign.To>
@@ -1185,7 +1185,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Customer Payout" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_167">
+    <Sequence DisplayName="Customer Payout" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_171">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_customer_payout" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_customer_payout_formatted" />
@@ -1199,7 +1199,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,357" sap2010:WorkflowViewState.IdRef="Sequence_91">
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_91">
         <Sequence.Variables>
           <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
         </Sequence.Variables>
@@ -1236,7 +1236,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_103">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,192" sap2010:WorkflowViewState.IdRef="Sequence_103">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1421,14 +1421,14 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,851" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,3083" sap2010:WorkflowViewState.IdRef="Sequence_106">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="496,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_4" Name="vlookup_c" Workbook="[Excel]">
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="501,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_4" Name="vlookup_c" Workbook="[Excel]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1436,7 +1436,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:InsertSheetX>
-                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="501,81" sap2010:WorkflowViewState.IdRef="Sequence_104">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1529,7 +1529,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:FormatRangeX>
                       </Sequence>
-                      <Sequence DisplayName="Write data &amp; autofill" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                      <Sequence DisplayName="Write data &amp; autofill" sap:VirtualizedContainerService.HintSize="496,2313" sap2010:WorkflowViewState.IdRef="Sequence_105">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1641,7 +1641,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:AutoFillX>
                       </Sequence>
-                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="496,116" sap2010:WorkflowViewState.IdRef="AutoFitX_7" Range="[Excel.Sheet(&quot;customer payout&quot;)]" Rows="False">
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="501,116" sap2010:WorkflowViewState.IdRef="AutoFitX_7" Range="[Excel.Sheet(&quot;customer payout&quot;)]" Rows="False">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1649,7 +1649,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:AutoFitX>
-                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="496,116" sap2010:WorkflowViewState.IdRef="AutoFitX_8" Range="[Excel.Sheet(&quot;vlookup_c&quot;)]" Rows="False">
+                      <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="501,116" sap2010:WorkflowViewState.IdRef="AutoFitX_8" Range="[Excel.Sheet(&quot;vlookup_c&quot;)]" Rows="False">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
