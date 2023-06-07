@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1182,1292</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1292</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -258,7 +258,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_96">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,192" sap2010:WorkflowViewState.IdRef="Sequence_96">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -761,7 +761,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Briva Repay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_216">
+    <Sequence DisplayName="Briva Repay" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_233">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_briva_repay" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_briva_repay_formatted" />
@@ -1323,7 +1323,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Customer Payout" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_217">
+    <Sequence DisplayName="Customer Payout" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_234">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_customer_payout" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_customer_payout_formatted" />
@@ -1885,7 +1885,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Briva Redem" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_218">
+    <Sequence DisplayName="Briva Redem" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_235">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_fstl_customer_payout" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_customer_payout_formatted" />
@@ -2046,7 +2046,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Keseluruhan" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_219">
+    <Sequence DisplayName="Keseluruhan" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_236">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="oda_and_amount_dctd_keseluruhan" />
         <Variable x:TypeArguments="sd:DataTable" Name="oda_keseluruhan_formatted" />
@@ -2578,7 +2578,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DatabaseConnect>
-        <ui:BuildDataTable DataTable="[header_laa_positif]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;clr_bal_amt&lt;/Column2&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+        <ui:BuildDataTable DataTable="[header_oda_positif]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;clr_bal_amt&lt;/Column2&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2586,13 +2586,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:BuildDataTable>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[list_oda_positif]" DisplayName="Get list oda positif" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_23" Sql="[&quot;select foracid,clr_bal_Amt from tbaadm.gam where foracid in (&quot; +str_oda_autopay+ &quot;) and clr_bal_amt &gt; 0;&quot;]">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[list_oda_positif]" DisplayName="Get list oda positif" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_23" Sql="[&quot;select foracid,clr_bal_Amt from tbaadm.gam where foracid in (&quot; +str_oda_autopay+ &quot;) and clr_bal_amt &gt; 0;&quot;]" TimeoutMS="30000">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -2618,14 +2618,14 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1301" sap2010:WorkflowViewState.IdRef="Sequence_203">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1060" sap2010:WorkflowViewState.IdRef="Sequence_203">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="501,52" sap2010:WorkflowViewState.IdRef="InsertSheetX_11" Name="oda positif" Workbook="[Excel]">
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="InsertSheetX_11" Name="oda positif" Workbook="[Excel]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2633,14 +2633,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:InsertSheetX>
-                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="501,81" sap2010:WorkflowViewState.IdRef="Sequence_201">
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_201">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,138" sap2010:WorkflowViewState.IdRef="FormatRangeX_62" Range="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A:A&quot;)]">
+                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,52" sap2010:WorkflowViewState.IdRef="FormatRangeX_62" Range="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A:A&quot;)]">
                           <ueab:FormatRangeX.Alignment>
                             <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                           </ueab:FormatRangeX.Alignment>
@@ -2652,7 +2652,7 @@
                           </ueab:FormatRangeX.Format>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -2692,15 +2692,15 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:FormatRangeX>
                       </Sequence>
-                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_47" IgnoreEmptySource="False" Source="[header_oda_positif]">
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="WriteRangeX_47" IgnoreEmptySource="False" Source="[header_oda_positif]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:WriteRangeX>
-                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_48" IgnoreEmptySource="False" Source="[list_oda_positif]">
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;oda positif&quot;).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_48" IgnoreEmptySource="True" Source="[list_oda_positif]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2767,13 +2767,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_221">
+      <Sequence DisplayName="Database activities" sap:VirtualizedContainerService.HintSize="450,457" sap2010:WorkflowViewState.IdRef="Sequence_221">
         <Sequence.Variables>
           <Variable x:TypeArguments="ui:DatabaseConnection" Name="BRICERPR" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -2785,7 +2785,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DatabaseConnect>
-        <ui:BuildDataTable DataTable="[header_laa_positif]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_8" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;laa&lt;/Column2&gt;&#xD;&#xA;    &lt;Column3&gt;clr_bal_amt&lt;/Column3&gt;&#xD;&#xA;    &lt;Column4&gt;laa&lt;/Column4&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+        <ui:BuildDataTable DataTable="[header_laa_positif]" DisplayName="Table Header 1" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_8" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Column4&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;oda&lt;/Column1&gt;&#xA;    &lt;Column2&gt;laa&lt;/Column2&gt;&#xA;    &lt;Column3&gt;clr_bal_amt&lt;/Column3&gt;&#xA;    &lt;Column4&gt;laa&lt;/Column4&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2793,7 +2793,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:BuildDataTable>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[list_laa_positif]" DisplayName="get list laa positif" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_24" Sql="[&quot;select (select foracid from tbaadm.gam where gam.acid=a.linked_overdraft_acid),foracid,clr_bal_amt from tbaadm.lam a join tbaadm.gam b on a.acid=b.acid where linked_overdraft_acid in (select acid from tbaadm.gam where foracid in (&quot; +str_oda_autopay+ &quot;)) and clr_bal_amt &gt;0;&quot;]">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[list_laa_positif]" DisplayName="get list laa positif" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_24" Sql="[&quot;select (select foracid from tbaadm.gam where gam.acid=a.linked_overdraft_acid),foracid,clr_bal_amt from tbaadm.lam a join tbaadm.gam b on a.acid=b.acid where linked_overdraft_acid in (select acid from tbaadm.gam where foracid in (&quot; +str_oda_autopay+ &quot;)) and clr_bal_amt &gt;0;&quot;]" TimeoutMS="300000">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
@@ -2806,7 +2806,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_226">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="659,192" sap2010:WorkflowViewState.IdRef="Sequence_226">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2819,14 +2819,14 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1510" sap2010:WorkflowViewState.IdRef="Sequence_223">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,1510" sap2010:WorkflowViewState.IdRef="Sequence_223">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_12" Name="laa positif" Workbook="[Excel]">
+                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="501,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_12" Name="laa positif" Workbook="[Excel]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2834,7 +2834,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:InsertSheetX>
-                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_225">
+                      <Sequence DisplayName="Formatting Column" sap:VirtualizedContainerService.HintSize="501,81" sap2010:WorkflowViewState.IdRef="Sequence_225">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2893,7 +2893,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:FormatRangeX>
                       </Sequence>
-                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;laa positif&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="450,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_49" IgnoreEmptySource="False" Source="[header_laa_positif]">
+                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;laa positif&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="501,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_49" IgnoreEmptySource="False" Source="[header_laa_positif]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2980,10 +2980,16 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DatabaseConnect>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[info_laa_positif]" DisplayName="get info laa positif" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_25" Sql="[&quot;select b.foracid,a.del_flg from tbaadm.ldt a join tbaadm.gam b on a.acid=b.acid where foracid in (&quot; +str_laa_positif+ &quot;) and a.del_flg = ‘N’ order by a.rcre_time desc;&quot;]">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[info_laa_positif]" DisplayName="get info laa positif" ExistingDbConnection="[BRICERPR]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ExecuteQuery_25" Sql="[&quot;select b.foracid,a.del_flg from tbaadm.ldt a join tbaadm.gam b on a.acid=b.acid where b.foracid in (&quot; +str_laa_positif+ &quot;) and a.del_flg = 'N' order by b.foracid desc;&quot;]" TimeoutMS="30000">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
         </ui:ExecuteQuery>
         <ui:DatabaseDisconnect DatabaseConnection="[BRICERPR]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_15" />
       </Sequence>
@@ -2993,7 +2999,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_228">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,192" sap2010:WorkflowViewState.IdRef="Sequence_228">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
